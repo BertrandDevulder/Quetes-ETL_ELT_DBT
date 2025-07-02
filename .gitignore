@@ -1,0 +1,5 @@
+Script.py
+env_dbt
+target/
+dbt_packages/
+logs/
