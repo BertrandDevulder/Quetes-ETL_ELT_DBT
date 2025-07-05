@@ -3,7 +3,21 @@ version: 2
 sources:
     - name: my_dbt_db
       schema: my_dbt_db
-
+      
       tables:
         - name: raw_customers
         - name: raw_orders
+
+version: 2
+
+sources:
+    - name: my_dbt_db
+      schema: my_dbt_db
+      
+      description: E-commerce data for the Jaffle Shop
+
+      tables:
+        - name: raw_customers
+          description: One record per person who has purchased one or more items
+        - name: raw_orders
+          description: One record per customer order 

@@ -7,3 +7,42 @@ models:
         - name: customer_id # Clé étrangère Customers
         - name: order_date # Date de commande
         - name: store_id # Clé étrangère Store
+
+version: 2
+
+models:
+    - name: stg_orders
+      columns:
+        - name: customer_id
+          tests:
+            - not_null
+        - name: order_date
+          tests:
+            - not_null
+        - name: store_id
+          tests:
+            - not_null
+
+version: 2
+
+models:
+  - name: stg_orders
+    description: Order data with basic cleaning and transformation applied.
+    columns:
+
+    
+
+      - name: store_id
+        description: "{{ doc('store_id_description') }}"
+      - name: customer_id
+        description: "{{ doc('customer_id_description') }}"
+        tests:
+            - not_null
+      - name: order_date
+        description: "{{ doc('order_date_description') }}"
+        tests:
+            - not_null
+      - name: store_id
+        description: "{{ doc('store_id_description') }}"
+        tests:
+            - not_null 
