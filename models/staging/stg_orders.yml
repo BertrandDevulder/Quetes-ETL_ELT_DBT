@@ -7,3 +7,19 @@ models:
         - name: customer_id # Clé étrangère Customers
         - name: order_date # Date de commande
         - name: store_id # Clé étrangère Store
+
+version: 2
+
+models:
+    - name: stg_orders
+      columns:
+        - name: customer_id
+          tests:
+            - not_null
+        - name: order_date
+          tests:
+            - not_null
+        - name: store_id
+          tests:
+            - not_null
+            
